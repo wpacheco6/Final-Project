@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Gamer Reef </title>
+<style>
+body {
+  background-image: url(DSC_0063_copyright-Julien-Holleville-copie-1024x678.jpg);
+  background-size: 900px;
+  background-size: cover;
+  background-position: center;
+}
+* {box-sizing: border-box}
+<body>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.tablink {
+  background-color: #f5331a;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #fd0303;
+}
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: rgb(43, 0, 255);}
+#News {background-color: rgb(63, 241, 129);}
+#About {background-color: rgb(162, 2, 255);}
+#Contact {background-color: rgb(251, 5, 169);}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('About', this, 'purple')">About</button>
+<button class="tablink" onclick="openPage('Contact', this, 'pink')">Contact</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Welcxome to Gamers Reef :)</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>What we plan to do in the future</h3>
+  <p>For now were only dealing with video games but we plan to try to deal with other pop culture genras like anime for an example.
+</p> 
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>what do we do and who are we?</h3>
+  <p>Gamer Reef is a a website made to sell or trade video games and video game related merchandise.</p>
+</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Phone number</h3>
+  <p>505-503-4455</p>
+  <h4>Email</h4>
+  <p>GamerReef@gmail.com</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+
+</style>
+</head>
+<body>
+    
+
+
+</body>
+</html>
+
